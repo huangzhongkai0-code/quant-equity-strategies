@@ -1,0 +1,36 @@
+[
+  {
+    "repo": "quant-equity-strategies",
+    "id": "size-value-allocation",
+    "title": "Size & Value Portfolio Construction",
+    "role": "Quant research · Asset management",
+    "question": "How does a transparent size/value tilt compare with the broad market?",
+    "method": "Use the six French value-weighted size/book-to-market portfolios. Fixed weights: 5/10/35/5/10/35%, in source column order. Rebalance monthly; cost 10bp per dollar bought or sold, including initial entry. Weights are illustrative design choices, not optimized. Report 2010–2025 separately from 2000–2009 context. Sharpe uses monthly RF; CAGR compounds net returns.",
+    "result": "The tilt returned 12.30% annualized versus 14.06% for the market. The result demonstrates a style allocation trade-off; it does not establish stock-level selection skill.",
+    "limits": "Research portfolio proxies are not directly tradable securities. Historical data are the September 2026 revised vintage, not a point-in-time archive. No claim of a previously untouched holdout or future alpha. Taxes and intra-portfolio trading costs are excluded.",
+    "metrics": [
+      "Net CAGR 12.30%",
+      "Sharpe 0.65",
+      "Max drawdown -35.43%"
+    ],
+    "source": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+    "period": "2000–2025 monthly data; evaluation 2010–2025"
+  },
+  {
+    "repo": "quant-equity-strategies",
+    "id": "trend-backtest",
+    "title": "Lagged Trend Strategy Backtest",
+    "role": "Quant research · Performance analysis",
+    "question": "Can a simple trend rule change the market drawdown profile?",
+    "method": "At each month start, hold the market if its previous 12 completed monthly total returns compound above zero; otherwise hold the RF proxy. Signals exclude the current month. Charge 10bp per full allocation switch. Compare against buy-and-hold for 2010–2025; also report 2000–2009 context in the CSV. No parameter search.",
+    "result": "Trend CAGR was 10.54%, with maximum drawdown -20.77%; market CAGR was 14.06% and drawdown -24.84%.",
+    "limits": "Monthly execution assumes the signal can be implemented at the period boundary. Real execution delay, instrument tracking error and taxes are excluded. The market index is a research proxy. Historical evaluation is not a live or pristine holdout track record.",
+    "metrics": [
+      "CAGR 10.54%",
+      "Max drawdown -20.77%",
+      "Sharpe 0.73"
+    ],
+    "source": "https://mba.tuck.dartmouth.edu/pages/faculty/ken.french/data_library.html",
+    "period": "2000–2025 monthly data; evaluation 2010–2025"
+  }
+]
